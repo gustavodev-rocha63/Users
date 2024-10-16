@@ -3,7 +3,7 @@ package com.example.Users.Entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "users")
+@Table(name = "Users")
 public class Participants {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,13 +13,13 @@ public class Participants {
     private String member;
     private String password;
     private String email;
-    private byte[] image;
+    private String image;
 
     public Long getId(){
         return id;
     }
 
-    public void setId(long id){
+    public void setId(Long id){
         this.id = id;
     }
 
@@ -47,11 +47,11 @@ public class Participants {
         this.email = email;
     }
 
-    public byte getImage(){
+    public String getImage(){
         return image;
     }
 
-    public void setImage(){
+    public void setImage(String image){
         this.image = image;
     }
 }
