@@ -18,12 +18,12 @@ public class UsersController {
     @Autowired
     private ParticipantsRepository participantsRepository;
 
-    @GetMapping("/{id}")
+    @GetMapping("list")
     public List<Participants>Users(){
         return participantsRepository.findAll();
     }
 
-    @PostMapping("/server/")
+    @PostMapping("/server")
     public Participants Request(@Valid @RequestBody Participants participants){
         return participantsRepository.save(participants );
     }
